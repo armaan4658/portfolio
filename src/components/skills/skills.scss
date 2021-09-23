@@ -1,0 +1,68 @@
+@import '../../global.scss';
+.skills{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        font-size: 50px;
+        text-align: center;
+    }
+        ul{
+            display: flex;
+            list-style: none;
+            margin: 10px 0;
+            li{
+                font-size: 20px;
+                font-weight: 500;
+                margin-right: 20px;
+                width: 140px;
+                color: $mainColor;
+                border: 2px solid $mainColor;
+                border-radius: 3%;
+                text-align: center;
+                transition: all 1s ease;
+                padding: 5px;
+                cursor: pointer;
+                &.active{
+                    background-color: $mainColor;
+                    color: white;
+                }
+            }
+
+        }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 50px;
+            border: 2px solid $mainColor;
+            border-radius: 3%;
+            margin: 10px 0;
+            .left{
+                flex: 0.7;
+                h4{
+                    margin-left: 3%;
+                }
+            }
+            .right{
+                flex: 0.3;
+                background-color: $mainColor;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span{
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
