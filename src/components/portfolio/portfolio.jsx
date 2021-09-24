@@ -2,6 +2,12 @@ import './portfolio.scss'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {data} from '../../data';
 export const Portfolio = () => {
+    const openProject = (u) => {
+        window.open(u.url,'_blank');
+    }
+    const openGitHub = (u) => {
+        window.open(u.github,'_blank');
+    }
     return(
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>
@@ -10,8 +16,8 @@ export const Portfolio = () => {
                     <div className="item">
                         <img src={d.src} alt=""/>
                         <div>
-                            <h3><a href={d.url}>{d.name}</a></h3>
-                            <a href={d.github}><GitHubIcon className="icon"/></a>
+                            <h3 onClick={()=>openProject(d)}>{d.name}</h3>
+                            <span onClick={()=>openGitHub(d)}><GitHubIcon className="icon"/></span>
                         </div>
                     </div> 
                 ))}

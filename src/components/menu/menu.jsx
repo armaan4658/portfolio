@@ -10,10 +10,10 @@ export const Menu = ({menuOpen,setMenuOpen}) => {
                     <a href="#into">Home</a>
                 </li>
                 <li onClick={closeMenu}>
-                    <a href="#skills">Skills </a>
+                    <a href="#portfolio">Portfolio</a>
                 </li>
                 <li onClick={closeMenu}>
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="#skills">Skills </a>
                 </li>
                 <li onClick={closeMenu}>
                     <a href="#contact">Contact</a>
