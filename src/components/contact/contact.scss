@@ -23,46 +23,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        h2{
-            font-size: 30px;
-        }
+        justify-content: space-around;
         form{
-            width: 70%;
-            height: 70%;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-
-            input{
-                width: 300px;
-                height: 30px;
-                @include mobile{
-                    width: 200px;
-                    height: 15px;
-                }
-            }
-            textarea{
-                width: 300px;
-                height: 150px;
-                font-size: 14px;
-                @include mobile{
-                    width: 200px;
-                    height: 100px;
-                }
-            }
+            width: 70%;
+            margin-bottom: 10px;
             button{
-                width: 150px;
-                height: 30px;
-                color: white;
-                background-color: crimson;
-                border: none;
-                border-radius: 10px;
-                font-weight: 500;
-                cursor: pointer;
-                &:focus{
-                    outline: none;
+                overflow: hidden;
+            }
+            .input{
+                padding: 10px 0;
+                div{
+                    overflow: hidden;
                 }
             }
         }
