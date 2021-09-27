@@ -79,6 +79,9 @@
       font-weight: 200;
       letter-spacing: 1px;
     }
+    .slide ul{
+      width: 60%;
+    }
     .slide ul li{
       font-size: 10px;
       padding: 5px;
@@ -92,7 +95,11 @@
     }
     
   }
-
+  @media only screen and (max-width: 380px) {
+    .slide ul{
+      width: 70%;
+    }
+  }
 
   .active-anim {
     opacity: 1;
