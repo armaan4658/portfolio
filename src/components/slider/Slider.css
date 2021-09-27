@@ -10,6 +10,7 @@
     border-radius: 10px;
     border: 2px solid #15023a;
   }
+
   @media only screen and (max-width: 780px) {
     .container-slider{
         width: 720px;
@@ -39,39 +40,61 @@
   .slide {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position:absolute;
     opacity: 0;
     transition: opacity ease-in-out 0.4s;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
   }
+  .container-slider:hover > div{
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: darken;
+    cursor:pointer;
+  }
+  .container-slider:hover div > p {
+    display: block;
+  }
+  .container-slider:hover div > h2{
+    display: block;
+  }
+  .container-slider:hover div > ul li{
+    display: block;
+  }
+  .container-slider:hover div > div{
+    display: block;
+  }
   .slide h2{
       color: white;
       font-weight: 400;
       text-align: center;
+      display: none;
   }
   .slide p{
         color: white;
         text-align: center;
         padding: 0 15px;
         font-weight: 400;
+        display: none;
   }
   .slide ul li{
     padding: 10px;
     border: 2px solid #00FF7F;
     margin: 10px 10px 0 0;
     border-radius: 3px;
+    display: none;
   }
   .slide div{
     padding-left: 10px;
+    display: none;
   }
   @media only screen and (max-width: 430px) {
-    .splide{
+    .slide{
       justify-content: center;
+      background-size: contain;
     }
     .slide h2{
       font-size: 15px;
@@ -164,8 +187,8 @@
     display: flex;
   }
   .dot {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     border: 3px solid #f1f1f1;
     margin: 0 5px;
@@ -173,14 +196,14 @@
   }
   @media only screen and (max-width: 780px) {
     .dot{
-      width: 14px;
-      height: 14px;
+      width: 7px;
+      height: 7px;
     }
   }
   @media only screen and (max-width: 430px) {
     .dot{
-      width: 7px;
-      height: 7px;
+      width: 4px;
+      height: 4px;
     }
   }
   .dot:hover{

@@ -44,11 +44,9 @@ export function Slider() {
                     <div
                     // key={obj.id}
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                    id="slide"
                     style={{
-                        // background:`rgba(0 0 0 0.7)`,
-                        backgroundImage:`url(assets/project${index+1}.png)`,
-                        backgroundSize:'contain',
-                        backgroundBlendMode:'darken'
+                        backgroundImage:`url(assets/project${index+1}.png)`
                     }}
                     >
                         <h2> {obj.name} </h2>
