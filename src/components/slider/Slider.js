@@ -2,7 +2,9 @@ import React, {useState} from 'react'
 import './Slider.css'
 import BtnSlider from './BtnSlider'
 import {data} from '../../data.js';
-import { Link } from '@mui/material';
+import { IconButton } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 export function Slider() {
 
@@ -42,18 +44,40 @@ export function Slider() {
                     <div
                     // key={obj.id}
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                    style={{
+                        // background:`rgba(0 0 0 0.7)`,
+                        backgroundImage:`url(assets/project${index+1}.png)`,
+                        backgroundSize:'contain',
+                        backgroundBlendMode:'darken'
+                    }}
                     >
                         <h2> {obj.name} </h2>
-                        <h4>
-                            <Link onClick={()=>openGithub(data[slideIndex-1]['github'])}>Github url</Link>
-                        </h4>
-                        <h4>
-                            <Link onClick={()=>openWebSite(data[slideIndex-1]['url'])}>Live project url</Link>
-                        </h4>
-                        <img 
-                        src={process.env.PUBLIC_URL + `/assets/project${index + 1}.png`} 
-                        alt=""
-                        />
+                        <p> {obj.description}  </p>
+                        <ul style={{
+                            display:'flex',
+                            flexDirection:'row',
+                            flexWrap:'wrap',
+                            color:'#00FF7F',
+                            fontWeight:'300'
+                        }}>
+                            {obj.tech.map(d=>(
+                                <li> {d} </li>
+                            ))}
+                        </ul>
+                        <div>
+                                <IconButton
+                                style={{color:'white'}}
+                                onClick={()=>openGithub(data[slideIndex-1]['github'])}
+                                >
+                                    <GitHubIcon />
+                                </IconButton>
+                                <IconButton
+                                style={{color:'white'}}
+                                onClick={()=>openWebSite(data[slideIndex-1]['url'])}
+                                >
+                                    <OpenInNewIcon />
+                                </IconButton>
+                        </div>
                     </div>
                 )
             })}

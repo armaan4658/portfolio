@@ -1,5 +1,4 @@
 import './portfolio.scss'
-// import GitHubIcon from '@mui/icons-material/GitHub';
 import {Slider} from '../slider/Slider.js';
 export const Portfolio = () => {
     return(
