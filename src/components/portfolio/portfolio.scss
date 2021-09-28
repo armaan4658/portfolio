@@ -1,3 +1,6 @@
+$small : 430px;
+$verysmall:376px;
+$toosmall:321px;
 .portfolio{
     background-color: lightsalmon;
     display: flex;
@@ -5,6 +8,139 @@
     justify-content: center;
     h1{
         text-align: center;
+        padding-bottom: 25px;
+        overflow: hidden;
+    }
+    div{
+        scroll-behavior: smooth;
+        scroll-snap-type: both mandatory;
+        scroll-snap-align: center;
+        overflow: hidden;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        div{
+            background-size: cover;
+            color: white;
+            width: 700px;
+            height: 400px;
+            margin-top: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-radius: 3px;
+            @media screen and (max-width: $small) {
+                width: 400px;
+                height: 300px;
+                background-size: cover;
+                h2{
+                    font-size: 12px;
+                    font-weight: 300;
+                }
+                p{
+                    font-size: 10px;
+                }
+                ul{
+                    li{
+                        font-size: 12px;
+                    }
+                }
+            }
+            @media screen and (max-width: $verysmall) {
+                width: 350px;
+                height: 250px;
+                background-repeat: no-repeat;
+                h2{
+                    font-size: 10px;
+                    font-family: 200;
+                }
+                p{
+                    font-weight: 100;
+                    font-size: 8px;
+                }
+                ul{
+                    li{
+                        font-size: 10px;
+                    }
+                }
+                span{
+                    button{
+                        svg{
+                            font-size: medium;
+                        }
+                    }
+                }
+            }
+
+            h2{
+                font-weight: 400;
+                font-size: 15px;
+                display: none;
+            }
+            p{
+                font-weight: 200;
+                font-size: 12px;
+                margin: 0 5px;
+                display: none;
+            }
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                display: none;
+                li{
+                    padding: 10px;
+                    margin: 10px 10px 0 0;
+                    color: #00FF7F;
+                    border: 2px solid #00FF7F;
+                    border-radius: 3px;
+                }
+            }
+
+            span{
+                margin: 0 auto 0 auto;
+                display: none;
+                button{
+                    color: white;
+                }
+            }
+            &:hover{
+                background-color: rgba(0,0,0,0.9);
+                background-blend-mode: darken;
+                h2{
+                    display: block;
+                }
+                p{
+                    display: block;
+                }
+                ul{
+                    display: flex;
+                }
+                span{
+                    display: block;
+                }
+            }
+            @media screen and (max-width: $toosmall) {
+                width: 300px;
+                height: 200px;
+                h2{
+                    font-size: 10px;
+                }
+                p{
+                    font-size: 8px;
+                }
+                ul{
+                    li{
+                        padding: 5px;
+                        margin: 4px 4px 0 0;
+                    }
+                }
+            }
+        }
     }
 
 }
