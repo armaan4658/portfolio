@@ -13,7 +13,9 @@ export const AboutUs = () => {
     }
     return(
         <div className="aboutus" id="aboutus">
-            <h1>About us</h1>
+            <div className="one">
+              <h1>About Us</h1>
+            </div>
             <VerticalTimeline>
                 {
                     timeLineData.map(e=>{
