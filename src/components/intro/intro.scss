@@ -97,7 +97,8 @@ $tabscreen:770px;
         }
         .resume{
             position: absolute;
-            bottom: 200px;
+            bottom: auto;
+            top: auto;
             text-decoration: none;
             color: black;
             border: 3px solid crimson;
@@ -111,15 +112,8 @@ $tabscreen:770px;
             }
             
         }
-        @media only screen and (max-width: $tabscreen) {
-            .resume{
-                bottom: 110px;
-                // left: 20px;
-            }
-        }
         @include mobile{
             .resume{
-                bottom: 50px;
                 left: 2px;
                 font-size: 20px;
             }
