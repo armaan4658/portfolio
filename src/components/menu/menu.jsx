@@ -12,6 +12,9 @@ export const Menu = ({menuOpen,setMenuOpen}) => {
                     <a href="#into">Home</a>
                 </li>
                 <li onClick={closeMenu}>
+                    <a href="#aboutus">About us</a>
+                </li>
+                <li onClick={closeMenu}>
                     <a href="#portfolio">Portfolio</a>
                 </li>
                 <li onClick={closeMenu}>

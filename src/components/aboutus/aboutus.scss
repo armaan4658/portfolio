@@ -1,0 +1,38 @@
+$max : 1800px;
+.aboutus{
+    // background-color: #15023a;
+    background-color: #3da3d5;
+    scroll-behavior: smooth;
+    scroll-snap-type: both mandatory;
+    scroll-snap-align: center;
+    color: rgb(53, 53, 53);
+    h1{
+        text-align: center;
+        // text-decoration: underline;
+        padding: 5px 0;
+        overflow: hidden;
+    }
+
+
+    .vertical-timeline{
+        .vertical-timeline-element{
+            span{
+                margin-top: 10px;
+                // margin-left: 10px;
+            }
+            .vertical-timeline-element-content{
+                border-radius: 3px;
+                @media only screen and (max-width: $max) {
+                    .vertical-timeline-element-date{
+                        position: initial !important;
+                        display: block !important;
+                        float: none !important;
+                        color: rgb(44, 44, 44);
+                        margin-top: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -29,7 +29,7 @@ export const Intro = () => {
                     <h1>Armaan</h1>
                     <h3>Full Stack <span ref={textRef}></span></h3>
                 </div>
-                <a href="#portfolio">
+                <a href="#aboutus">
                     <img src="assets/down.png" alt=""/>
                 </a>
             </div>
