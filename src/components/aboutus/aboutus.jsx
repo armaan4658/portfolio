@@ -4,6 +4,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import BackpackOutlinedIcon from '@mui/icons-material/BackpackOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import './aboutus.scss';
+import Link from '@mui/material/Link';
 export const AboutUs = () => {
     let schoolIconStyle = {
         background:'#06D6A0'
@@ -11,6 +12,7 @@ export const AboutUs = () => {
     let collegeIconStyle = {
         background:'#f9c74f'
     }
+    const resume = `https://drive.google.com/file/d/1ZwrDZHeE9YAYxEOsnumJgD83Pvx6H9zn/view?usp=sharing`;
     return(
         <div className="aboutus" id="aboutus">
             <div className="one">
@@ -35,6 +37,9 @@ export const AboutUs = () => {
                     })
                 }
             </VerticalTimeline>
+            <div className="resume-div">
+                <Link className="resume" onClick={()=>window.open(resume,"_blank")}>Resume</Link>
+            </div>
         </div>
     )
 }

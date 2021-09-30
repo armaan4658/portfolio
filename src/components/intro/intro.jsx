@@ -1,7 +1,6 @@
 import './intro.scss';
 import {init} from 'ityped';
 import * as React from 'react';
-import Link from '@mui/material/Link';
 export const Intro = () => {
     const textRef = React.useRef();
     const typing = () => {
@@ -17,7 +16,6 @@ export const Intro = () => {
     }catch(e){
         console.log(e);
     }
-    const resume = `https://drive.google.com/file/d/1ZwrDZHeE9YAYxEOsnumJgD83Pvx6H9zn/view?usp=sharing`;
     return(
         <div className="intro" id="into">
             <div className="left">
@@ -32,7 +30,6 @@ export const Intro = () => {
                     <h3>Full Stack <span ref={textRef}></span></h3>
                     
                 </div>
-                <Link className="resume" onClick={()=>window.open(resume,"_blank")}>Resume</Link>
                 <a href="#aboutus">
                     <img src="assets/down.png" alt=""/>
                 </a>

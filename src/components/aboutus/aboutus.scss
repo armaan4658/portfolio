@@ -5,7 +5,7 @@ $max : 1800px;
     background-color: #3da3d5;
     scroll-behavior: smooth;
     scroll-snap-type: both mandatory;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     color: rgb(53, 53, 53);
     h1 {
         position: relative;
@@ -84,6 +84,29 @@ $max : 1800px;
                 }
             }
         }
+    }
+    .resume-div{
+      display: flex;
+      justify-content: center;
+      .resume{
+        color: crimson;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 25px;
+        border: 3px solid crimson;
+        padding: 3px;
+        border-radius: 3px;
+        margin: 10px 0 20px 0;
+        background-color: white;
+        &:hover{
+          padding: 5px;
+          color: rgb(180, 5, 40);
+          cursor: pointer;
+        }
+        @media screen and (max-width: $phone) {
+          font-size: 18px;
+        }
+      }
     }
 
 }
