@@ -12,7 +12,7 @@ export const AboutUs = () => {
     let collegeIconStyle = {
         background:'#f9c74f'
     }
-    const resume = `https://drive.google.com/file/d/1ZwrDZHeE9YAYxEOsnumJgD83Pvx6H9zn/view?usp=sharing`;
+    const resume = `https://drive.google.com/file/d/1k0-IYqFeLGAzVD3c--jEEdS4EcFt0RJE/view?usp=sharing`;
     return(
         <div className="aboutus" id="aboutus">
             <div className="one">
