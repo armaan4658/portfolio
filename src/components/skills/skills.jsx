@@ -29,6 +29,14 @@ export const Skills = () => {
                     </div>
                     <div className="item">
                         <div className="left">
+                            <h4>React - redux</h4>
+                        </div>
+                        <div className="right">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="left">
                             <h4>Node Js</h4>
                         </div>
                         <div className="right">
